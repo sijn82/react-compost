@@ -1,13 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from '../assets/images/logo.svg';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+function Logo() {
+    return (
+        <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code className='text-gray-400 font-bold'> src/App.tsx </code> and save to reload.
         </p>
         <a
           className="App-link"
@@ -18,8 +16,7 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
-  );
+    )
 }
 
-export default App;
+export default Logo
