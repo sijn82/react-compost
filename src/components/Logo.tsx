@@ -1,12 +1,21 @@
 import logo from '../assets/images/logo.svg';
 
 
+
 type LogoProps = {
-    name: string
+    name: string,
+    homepage: boolean
+    setHomepage: (homepage: boolean) => (void);
 }
 
 function Logo(props: LogoProps) {
+
+    const toggleHomepage = () => {
+        props.setHomepage(false)
+    }
+
     return (
+        props.homepage,
         <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <p>
@@ -23,6 +32,7 @@ function Logo(props: LogoProps) {
             >
             Learn React
             </a>
+            <button onClick={toggleHomepage}> Enter Portal </button>
       </header>
     )
 }
